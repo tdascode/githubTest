@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login / Register Form</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border-radius: 15px;
+      width: 400px;
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(10px);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 24px;
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="email"],
+    .form-container input[type="password"] {
+      width: 100%;
+      padding: 14px;
+      margin: 12px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .form-container label {
+      font-size: 14px;
+    }
+
+    .form-options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px 0;
+    }
+
+    .form-options a {
+      color: #aaa;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .form-options a:hover {
+      color: #fff;
+    }
+
+    .form-container button {
+      width: 100%;
+      padding: 14px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .form-container button:hover {
+      background-color: #0056b3;
+    }
+
+    .toggle-link {
+      margin-top: 20px;
+      text-align: center;
+      color: #aaa;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .toggle-link:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2 id="form-title">Welcome to ZEROBITE</h2>
+  <h3 id="form-title">Create an account</h3>
+
+  <form id="auth-form">
+    <input type="text" placeholder="Username" required><br>
+    <input type="email" placeholder="Email" required id="email"><br>
+    <input type="password" placeholder="Password" required><br>
+
+    <div class="form-options">
+      <label><input type="checkbox"> Remember me</label>
+      <!--<a href="#">Forgot password?</a>-->
+    </div>
+
+    <label><input type="checkbox"> I agree with Terms and Conditions</label><br>
+    <button type="submit" id="submit-btn"><a href="pg1.html">Register</a></button>
+  </form>
+
+  <div class="toggle-link" onclick="toggleForm()">
+   Already have an account? Login
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ZEROBITE | Home</title>
+  <link rel="stylesheet" href="style.css/style1.css">
+</head>
+<body>
+
+  <!-- Floating Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">ZEROBITE</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Donate</a></li>
+        <li><a href="#">Volunteer</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content with Slideshow -->
+  <main class="main-content">
+    <div class="slideshow-container">
+      <div class="slide fade" style="background-image: url('IMG/img3.jpg');"></div>
+      <div class="slide fade" style="background-image: url('IMG/IMG4.jpg');"></div>
+      <div class="slide fade" style="background-image: url('IMG/IMG5.jpg');"></div>
+      <div class="slide fade" style="background-image: url('IMG/img6.avif');"></div>
+      <div class="slide fade" style="background-image: url('IMG/img7.avif');"></div>
+    </div>
+    <div class="overlay-text">
+      <h1>Feeding Hopes, Not Bins</h1>
+      <p>Choose your role and be a hero today.</p>
+      <div class="buttons">
+        <a href="donform.html" class="btn">I'm a Food Donor</a>
+        <a href="volform.html" class="btn">I'm a Volunteer</a>
+      </div>
+    </div>
+  </main>
+  <script>
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("slide");
+
+    function showSlides() {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.opacity = 0;
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.opacity = 1;
+      setTimeout(showSlides, 4000); // Change image every 4 seconds
+    }
+    showSlides();
+  </script>
+  
+<!-- Two-Part Visual Story -->
+<section class="compare-section">
+  <!-- Left: Food Waste -->
+  <div class="compare-box">
+    <div class="compare-slideshow left-slideshow">
+      <img src="IMG/img10.jpg" class="compare-slide left" alt="Wasted food">
+      <img src="IMG/img8.jpg" class="compare-slide left" alt="Restaurant throwing food">
+      <img src="IMG/img9.jpg" class="compare-slide left" alt="Restaurant throwing food">
+    </div>
+    <p>
+      Every night, restaurants discard tons of leftover food — still fresh, untouched, and edible. 
+      This food ends up in the garbage while it could feed hundreds.
+    </p>
+  </div>
+
+  <!-- Right: Hunger -->
+  <div class="compare-box">
+    <div class="compare-slideshow right-slideshow">
+      <img src="IMG/img11.jpg" class="compare-slide right" alt="Hungry children">
+      <img src="IMG/img12.jpg" class="compare-slide right" alt="People sleeping hungry">
+      <img src="IMG/img13.jpg" class="compare-slide right" alt="People sleeping hungry">
+    </div>
+    <p>
+      Meanwhile, thousands of poor people go to bed hungry, with no idea when their next meal will come. 
+      A simple act of saving and sharing could change lives.
+    </p>
+  </div>
+</section>
+  <!-- Slide functionality for Left & Right Slideshows -->
+  <script>
+    // Left slideshow
+    let leftSlides = document.querySelectorAll(".compare-slide.left");
+    let leftIndex = 0;
+
+    function showLeftSlide() {
+      leftSlides.forEach((slide, i) => {
+        slide.style.opacity = i === leftIndex ? 1 : 0;
+      });
+      leftIndex = (leftIndex + 1) % leftSlides.length;
+    }
+
+    setInterval(showLeftSlide, 4000);
+    showLeftSlide();
+
+    // Right slideshow
+    let rightSlides = document.querySelectorAll(".compare-slide.right");
+    let rightIndex = 0;
+
+    function showRightSlide() {
+      rightSlides.forEach((slide, i) => {
+        slide.style.opacity = i === rightIndex ? 1 : 0;
+      });
+      rightIndex = (rightIndex + 1) % rightSlides.length;
+    }
+
+    setInterval(showRightSlide, 4000);
+    showRightSlide();
+  </script>
+  <!-- Picture and Text Side-by-Side Section -->
+<section class="pic-text-section">
+  <div class="pic-text-left">
+    <img src="IMG/img14.jpg" alt="Helping hand or food image">
+  </div>
+  <div class="pic-text-right">
+    
+    
+     <h2> 🍽 Collects Leftover Food </h2>
+      <p>We partner with restaurants and food donors to collect surplus food that would otherwise go to waste.</p>
+
+<h2>🚚 Pickup at Closing Time</h2>
+<p>No extra effort needed—our team picks up the food right when the restaurant closes.</p>
+
+<h2>🧑‍🤝‍🧑 Delivers to the Needy</h2>
+<p>We ensure the food reaches people who need it most—homeless shelters, slums, and street-dwellers—with dignity.
+    </p>
+  </div>
+</section>
+<!-- Advertisement Banner Section -->
+<section class="advertisement-section">
+  <h2>Advertisement</h2>
+  <div class="ad-banner">
+    <p>Your Ad or Sponsor Banner Could Be Here</p>
+  </div>
+</section>
+
+<!-- Restaurant Join Message + Slideshow Section -->
+<section class="join-cafe-section">
+  <div class="join-left">
+    <h1>Why Join Us</h1><br>
+    <h3>No Food Waste, Just Good Deeds</h3>
+    <p>Turn your unsold food into someone's next meal—zero waste, all heart.<p>
+      <h3>No Extra Effort </h3>
+      <p>Just pack up your leftovers, and our team picks it up at your closing time<p>
+        <h3>Free to Join </h3>
+        <p>Any restaurant can sign up at zero cost.<p>
+        <h3>Earn While You Give</h3>
+        <p>Every time you donate, you earn Zerobite Coins.<p>
+        <h3>Exclusive Rewards </h3>
+        <p>Redeem your coins for 20–50% discounts on partner platforms like Swiggy (and more to come!).
+          <p>
+
+
+  </div>
+  <div class="join-right">
+    <div class="cafe-slideshow">
+      <img src="IMG/img15.avif" class="cafe-slide">
+      <img src="IMG/img16.avif" class="cafe-slide" >
+      <img src="IMG/img17.jpg" class="cafe-slide" >
+
+      
+    </div>
+  </div>
+</section>
+<script>
+  // Restaurant Slideshow
+  let cafeSlides = document.querySelectorAll(".cafe-slide");
+  let cafeIndex = 0;
+
+  function showCafeSlide() {
+    cafeSlides.forEach((slide, i) => {
+      slide.style.opacity = i === cafeIndex ? 1 : 0;
+    });
+    cafeIndex = (cafeIndex + 1) % cafeSlides.length;
+  }
+
+  setInterval(showCafeSlide, 4000);
+  showCafeSlide();
+</script>
+
+
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    .three-columns {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 40px 20px;
+      gap: 20px;
+      background-color: #fff;
+    }
+
+    .section-box {
+      flex: 1;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .section-box h2 {
+      font-size: 1.5em;
+      margin-bottom: 15px;
+    }
+
+    .slideshow {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+      margin-bottom: 15px;
+      scrollbar-width: none;
+    }
+
+    .slideshow::-webkit-scrollbar {
+      display: none;
+    }
+
+    .slideshow img {
+      width: 100%;
+      max-width: 220px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .note {
+      font-size: 0.95em;
+      color: #555;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 900px) {
+      .three-columns {
+        flex-direction: column;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="three-columns">
+    <!-- DONATE FOOD -->
+    <div class="section-box">
+      <h2>🍽 DONATE FOOD</h2>
+      <div class="slideshow">
+        <img src="IMG/img19.jpg" alt="Pack food">
+        <img src="IMG/img20.jpg" alt="Pickup">
+        
+      </div>
+      <p class="note">
+        Share your extra meals effortlessly. We pick up leftovers and deliver them to the hungry with care.
+      </p>
+    </div>
+
+    <!-- REDEEM COINS -->
+    <div class="section-box">
+      <h2>💰 REDEEM COINS</h2>
+      <div class="slideshow">
+        <img src="IMG/img21.avif" alt="Earn coins">
+        <img src="IMG/img22.webp" alt="Track rewards">
+        <img src="IMG/img23.jpg" alt="Volunteer reward">
+      </div>
+      <p class="note">
+        Earn Zerobite Coins for every donation. Redeem them for exclusive rewards and perks.
+      </p>
+    </div>
+
+    <!-- USE COINS -->
+    <div class="section-box">
+      <h2>🎉 USE COINS & GET OFF</h2>
+      <div class="slideshow">
+        <img src="IMG/img24.jpg" alt="Use discount">
+        <img src="IMG/img25.webp" alt="Swiggy offer">
+      </div>
+      <p class="note">
+        Exchange your coins for discounts (20–50%) on food apps like Swiggy. Giving feels even better with rewards!
+      </p>
+    </div>
+  </div>
+
+
+
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- Services Column -->
+    <div class="footer-box">
+      <h3>Services</h3>
+      <ul>
+        <li>Food collection</li>
+        <li>Donate food among the poor</li>
+        <li>Donate clothes</li>
+      </ul>
+    </div>
+
+    <!-- Contact Column -->
+    <div class="footer-box">
+      <h3>Contact Information</h3>
+      <p>Feel free to contact and reach us!</p>
+      <ul>
+        <li>📍 Kolkata<br></li>
+        <li>📞 1800 890 5089</li>
+        <li>✉️ help@zerobite.in</li>
+      </ul>
+    </div>
+
+    <!-- Regions Column -->
+    <div class="footer-box">
+      <h3>Motivation</h3>
+      <ul>
+        <li>“Feed Hope, Not Landfills”</li>
+        <li>“Share a Meal, Share a Smile”</li>
+        <li>“Leftovers with Love”</li>
+        <li>“A Small Act, A Big Impact”</li>
+      </ul>
+    </div>
+
+    <!-- Support Column -->
+    <div class="footer-box">
+      <h3>Support</h3>
+      <ul>
+        <li>Contact Us</li>
+        <li>Careers</li>
+        <li>Volunteering</li>
+        <li>Events</li>
+        <li>Privacy Policy</li>
+        <li>Terms & Conditions</li>
+        <li>Cancellation Policy</li>
+        <li>Refund Policy</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
